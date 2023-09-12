@@ -29,12 +29,42 @@ function Navbar(props: NavbarProps ) {
             </ul> 
         </nav> 
     </div> ) }
+type FooterLinkProps = {
+    text: string
+    url: string
+}
+
+function FooterLink(props: FooterLinkProps) {
+    let {url, text} = props;
+    return <a className="transition hover:text-blue-500" href={url}>{text}</a>
+}
+    
+function Footer() {
+    return <footer className="pt-10 px-8 pb-16 border-t">
+        <div className="flex justify-between gap-6">  
+            <div className="flex gap-6 text-sm font-medium text-zinc-800">
+                <p className="text-sm text-zinc-800">Cynthia Weaver, <a className="transition hover:text-blue-500" href="https://github.com/CynthiaWeaver-Jeannine/Cynthia_Weaver-Portfolio" >GitHub Project Link</a>
+                </p>
+            </div>             
+            <div className="flex gap-6 text-sm font-medium text-zinc-800">
+                <FooterLink text={"About Me"} url="/" />
+                <FooterLink text={"Projects"} url="/projects" />
+                <FooterLink text={"Blog"} url="/blog" />
+            </div>                
+            <p className="text-sm text-zinc-800">© 2023, Built with <a className="transition hover:text-blue-500" href="https://nextjs.org/">Next.js</a> and <a className="transition hover:text-blue-500" href="https://tailwindcss.com/">Tailwind CSS</a></p>
+        </div>
+    </footer>
+}
 
 export default function Layout({children}: any) {
     return (
         <>
-        <Navbar pageId={children.props.pageId}/>
+        <Navbar pageId={children.props.pageId} />
         <main>{children}</main>
+        <Footer />
         </>
     )
 }
+
+
+
