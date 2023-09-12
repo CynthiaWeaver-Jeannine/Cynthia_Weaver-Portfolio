@@ -23,8 +23,8 @@ function Navbar(props: NavbarProps ) {
     <div className="flex justify-center mx-auto max-w-7xl h-16 pt-6"> 
         <nav> 
             <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">           
-                <NavItem  title={"About Me"} url="/" isSelected={props.pageId == "about_me"} />           
-                <NavItem title={"Projects"} url={"/projects"} isSelected={props.pageId == "projects"} />           
+                <NavItem  title={"Projects"} url="/" isSelected={props.pageId == "projects"} />           
+                <NavItem title={"About Me"} url={"/aboutMe"} isSelected={props.pageId == "about_me"} />           
                 <NavItem title={"Blog"} url={"/blog"} isSelected={props.pageId == "blog"} />  
             </ul> 
         </nav> 
@@ -43,15 +43,15 @@ function Footer() {
     return <footer className="pt-10 px-8 pb-16 border-t">
         <div className="flex justify-between gap-6">  
             <div className="flex gap-6 text-sm font-medium text-zinc-800">
-                <p className="text-sm text-zinc-800">Cynthia Weaver, <a className="transition hover:text-blue-500" href="https://github.com/CynthiaWeaver-Jeannine/Cynthia_Weaver-Portfolio" >GitHub Project Link</a>
+                <p className="text-sm text-zinc-800"><a className="transition hover:text-blue-500" href="https://github.com/CynthiaWeaver-Jeannine/Cynthia_Weaver-Portfolio" target="_blank" rel="noopener noreferrer">GitHub Project Link</a>
                 </p>
             </div>             
             <div className="flex gap-6 text-sm font-medium text-zinc-800">
-                <FooterLink text={"About Me"} url="/" />
-                <FooterLink text={"Projects"} url="/projects" />
+                <FooterLink text={"Projects"} url="/" />
+                <FooterLink text={"About Me"} url="/aboutMe" />
                 <FooterLink text={"Blog"} url="/blog" />
             </div>                
-            <p className="text-sm text-zinc-800">© 2023, Built with <a className="transition hover:text-blue-500" href="https://nextjs.org/">Next.js</a> and <a className="transition hover:text-blue-500" href="https://tailwindcss.com/">Tailwind CSS</a></p>
+            <p className="text-sm text-zinc-800">© 2023, Built with <a className="transition hover:text-blue-500" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a> and <a className="transition hover:text-blue-500" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a></p>
         </div>
     </footer>
 }
