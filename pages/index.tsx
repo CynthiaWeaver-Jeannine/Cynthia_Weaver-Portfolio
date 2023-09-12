@@ -1,5 +1,8 @@
 
-import Image from 'next/image'
+import Image, { StaticImageData } from "next/image";
+
+import imageFlashcardApp from "../public/images/flashcard-app.png";
+import imageRestaurantReservations from "../public/images/restaurant-reservations-app.png";
 
 
 export async function getStaticProps() {
@@ -13,43 +16,46 @@ export async function getStaticProps() {
 type ProjectItemProps = {
     name: string
     url: string
-    imageSrc: string
+    imageSrc: StaticImageData
     codeAccess: string
     codeUrl: string
+    subtitle: string
 }
 
 function ProjectItem(props: ProjectItemProps) {
-    let{name, url, codeAccess, codeUrl, imageSrc: image} = props;
-    return <li className="col-span-1">
-        <a href={url} target="_blank">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    let{name, url, codeAccess, codeUrl, imageSrc: image, subtitle} = props;
+    return <li>
+        <a href={url} target="_blank"> 
+        <div >
+        <p className="font=bold text-4xl mb-1">{name}</p>
+        <p className= "text-xl mb-4">{subtitle}</p></div>
+            <div className="max-w-XL rounded overflow-hidden shadow-lg">
+                <Image className="w-full" src={image} alt={name}/>
                 <div className="px-6 py-4">
-                    <div className="font=bold text-xl mb-2">{name}</div>
+                   
                 </div>
-                <Image src="/images/[image file name]" alt="[image description]" width={300} height={300} />
+                
             </div>
             
-        </a><div className="px-6 py-4">
-                <span className="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-zinc-800 mr-2"><a href={codeUrl} target="_blank">{codeAccess}</a></span>
+        </a>
+        <div className="px-6 py-4">
+                <span className="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-zinc-800 mr-2 mb-16"><a href={codeUrl} target="_blank">{codeAccess}</a></span>
             </div>
         </li>
 }
 export default function Projects() {
     return <div className="mt-16 px-8">
-        <header>
-            <h1 className="text-4xl font-bold text-zinc-900">Cynthia Weaver's Project Gallery</h1>
-            <p className="text-l italic text-zinc-800">Exploring. Learning. Creating. Turning Ideas into Reality.</p>
-            <p className="text-base mt-6 text-xl text-zinc-800">I invite you to discover my projects.</p>
+        <header className="border-b">
+            <h1 className="text-5xl font-bold text-zinc-900">Cynthia Weaver's Project Gallery</h1>
+            <p className="text-lg italic text-zinc-800 mt-2">Exploring. Learning. Creating. Turning Ideas into Reality.</p>
         </header>
-        <div className="mt-16">
-            <h2 className="text-2xl">Apps</h2>
-            <ul className="grid grid-cols-3 gap-x-12 gap-y-16 mt-8">
-                <ProjectItem name="Restaurant Reservation System" url="https://restaurant-reservations-system.onrender.com/" codeUrl="https://github.com/CynthiaWeaver-Jeannine/reservation-system" codeAccess="Restaurant Reservation System Code" imageSrc="/images/restaurant-reservation-system.png" />
-                <ProjectItem name="Flashcard-O-Matic" url="https://flashcards-frontend-ole1.onrender.com/" codeUrl="https://github.com/CynthiaWeaver-Jeannine/flashcard-o-matic" codeAccess="Flashcard-O-Matic Code" imageSrc="/images/flashcard-o-matic.png" />
+        <div className="mt-8">            
+            <ul className="mt-8">
+                <ProjectItem name={"Restaurant Reservations System"} url={"https://restaurant-reservations-system.onrender.com/"} subtitle={"Web Application. Skills: React, Nodejs, Express, Knexjs, PostgreSQL"} codeUrl={"https://github.com/CynthiaWeaver-Jeannine/reservation-system"} codeAccess={"GitHub Link"} imageSrc={imageRestaurantReservations} />
+                <ProjectItem name="Flashcard-O-Matic" url={"https://flashcards-frontend-ole1.onrender.com/"} subtitle={"Web Application. Skills: React, JavaScript, HTML, CSS, Knex.js"} codeUrl={"https://github.com/CynthiaWeaver-Jeannine/flashcard-o-matic"} codeAccess={"GitHub Link"} imageSrc={imageFlashcardApp} />
             </ul>
         </div>
-        <div className="mt-16"><h2 className="text-2xl">Web Pages</h2></div>
-        <div className="mt-16"><h2 className="text-2xl">Continuous Learning</h2></div>
+     
         </div>
 
 }
