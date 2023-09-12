@@ -4,8 +4,8 @@ export async function getStaticProps() {
            pageId:"blog"
         }
     }
-}{}
+}
 
 export default function Essays() {
-    return <div>Blog</div>
+    return <>Blog</>
 }
