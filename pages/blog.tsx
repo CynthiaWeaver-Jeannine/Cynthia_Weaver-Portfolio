@@ -1,11 +1,11 @@
 export async function getStaticProps() {
     return {
         props: {
-           pageId:"essays"
+           pageId:"blog"
         }
     }
 }{}
 
 export default function Essays() {
-    return <div>Essays</div>
+    return <div>Blog</div>
 }
