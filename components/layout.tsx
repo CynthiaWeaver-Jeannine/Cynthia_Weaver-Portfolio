@@ -43,7 +43,7 @@ function Footer() {
     return <footer className="pt-10 px-8 pb-16 border-t">
         <div className="flex justify-between gap-6">  
             <div className="flex gap-6 text-sm font-medium text-zinc-800">
-                <p className="text-sm text-zinc-800"><a className="transition hover:text-blue-500" href="https://github.com/CynthiaWeaver-Jeannine/Cynthia_Weaver-Portfolio" target="_blank" rel="noopener noreferrer">GitHub Project Link</a>
+                <p className="text-sm text-zinc-800"><a className="transition hover:text-blue-500" href="https://github.com/CynthiaWeaver-Jeannine/Cynthia_Weaver-Portfolio" target="_blank" rel="noopener noreferrer">GitHub Portfolio Project Link</a>
                 </p>
             </div>             
             <div className="flex gap-6 text-sm font-medium text-zinc-800">
