@@ -19,7 +19,7 @@ function Navbar() {
             <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">           
                 <NavItem  title={"About Me"} url="/" />           
                 <NavItem title={"Projects"} url={"/projects"} />           
-                <NavItem title={"Essays"} url={"/essays"} />  
+                <NavItem title={"Blog"} url={"/blog"} />  
             </ul> 
         </nav> 
     </div> ) }
