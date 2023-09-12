@@ -10,12 +10,11 @@ isSelected: boolean
 function NavItem(props: NavItemProps) { 
     const { title, url, isSelected } = props;
     return (     
-    <li>       
-        <a className={`block px-3 py-2 transition hover:text-teal-500 ${isSelected?"text-teak-500": ""}`} href={url}>{title}</a>     
-        </li>   
+    <li>     
+        <a className={`inline-block px-4 py-2 ${isSelected ? 'bg-zinc-900 text-white' : 'text-zinc-900 hover:bg-zinc-500 hover:text-white'} transition duration-300 ease-in-out`} href={url}>{title}</a>  
+    </li>   
         ) 
     } 
-
     type NavbarProps = {
         pageId: string
     }
