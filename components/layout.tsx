@@ -62,6 +62,12 @@ export default function Layout({children}: any) {
         <>
         <Head>
             <link rel="icon" href="/favicon.ico" />
+            <title>{children.props.metadata.title}</title>
+            {/*Open Graph tags*/}
+            <meta property="og:title" content={children.props.metadata.title} />
+            <meta property="og:description" content={children.props.metadata.description} />
+            <meta property="og:image" content={children.props.metadata.openGraph.image} /> 
+            <meta property="og:url" content={children.props.metadata.openGraph.url} />
         </Head>
         <Navbar pageId={children.props.pageId} />
         <main>{children}</main>
