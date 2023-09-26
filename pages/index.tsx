@@ -68,7 +68,7 @@ export default function Projects() {
 		<div className="mt-16 px-8">
 			<header className="border-b py-8">
 				<h1 className="text-5xl font-bold text-zinc-900">
-					Cynthia Weaver's Project Gallery
+					Project Gallery of Cynthia Weaver
 				</h1>
 				<p className="text-lg italic text-zinc-800 mt-2 mb-4">
 					Exploring. Learning. Creating. Turning Ideas into Reality.
