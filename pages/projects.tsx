@@ -23,12 +23,12 @@ export async function getStaticProps() {
 }
 
 type ProjectItemProps = {
-	name: string;
-	url: string;
-	imageSrc: StaticImageData;
-	codeAccess: string;
-	codeUrl: string;
-	subtitle: string;
+	name: string
+	url: string
+	imageSrc: StaticImageData
+	codeAccess: string
+	codeUrl: string
+	subtitle: string
 };
 
 function ProjectItem(props: ProjectItemProps) {
