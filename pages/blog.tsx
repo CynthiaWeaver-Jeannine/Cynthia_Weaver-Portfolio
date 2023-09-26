@@ -17,6 +17,6 @@ export async function getStaticProps() {
 	};
 }
 
-export default function Essays() {
+export default function Blog() {
 	return <>Blog</>;
 }
